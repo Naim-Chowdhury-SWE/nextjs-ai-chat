@@ -7,7 +7,7 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <main className="flex flex-col w-full h-full bg-gray-500">
+    <main className="flex flex-col w-full h-full bg-zinc-500">
       <header className="p-4 border-b">
         <h1 className="text-2xl font-bold text-center">AI Chat</h1>
       </header>
@@ -36,15 +36,15 @@ export default function Chat() {
             <>
               {m.role === "user" ? (
                 <li key={index} className="flex flex-row">
-                  <div className="rounded-xl p-4 bg-lime-400 shadow-md flex">
+                  <div className="rounded-xl p-4 bg-zinc-200 shadow-md flex">
                     <p className="text-primary font-semibold">
-                      Question: <span>{m.content}</span>
+                      Question: <span className="font-light">{m.content}</span>
                     </p>
                   </div>
                 </li>
               ) : (
                 <li key={index} className="flex flex-row-reverse">
-                  <div className="rounded-xl p-4 bg-pink-500 shadow-md flex w-3/4">
+                  <div className="rounded-xl p-4 bg-slate-500 shadow-md flex w-3/4">
                     <p className="text-primary">
                       Answer: <span className="font-bold">{m.content}</span>
                     </p>
